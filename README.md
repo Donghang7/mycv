@@ -1,48 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dong Hang's Resume</title>
   <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      background: linear-gradient(135deg, #e9f0f7, #f4f9fc);
       color: #333;
+      line-height: 1.6;
     }
+
     header {
-      background-color: #35424a;
-      color: #fff;
-      padding: 20px 0;
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      padding: 40px 20px;
       text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
+    header h1 {
+      margin: 0 0 10px;
+      font-weight: 700;
+      font-size: 2.8rem;
+      letter-spacing: 1.2px;
+    }
+    header p {
+      margin: 5px 0;
+      font-weight: 300;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #bdc3c7;
+    }
+
     .container {
-      width: 80%;
-      margin: auto;
-      overflow: hidden;
-      padding: 20px 0;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
-    h1, h2 {
-      color: #35424a;
-    }
+
     .section {
-      background: #fff;
-      margin-bottom: 20px;
-      padding: 20px;
-      border-radius: 5px;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 25px 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
     }
+    .section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #34495e;
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-weight: 700;
+      border-left: 6px solid #2980b9;
+      padding-left: 12px;
+      font-size: 1.8rem;
+    }
+
     ul {
       list-style: none;
-      padding: 0;
+      padding-left: 0;
     }
     li {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+      position: relative;
+      padding-left: 15px;
     }
+    li::before {
+      content: "•";
+      color: #2980b9;
+      position: absolute;
+      left: 0;
+      font-size: 1.3rem;
+      line-height: 1;
+      top: 0;
+    }
+
     a {
-      color: #35424a;
+      color: #2980b9;
       text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #1c5980;
+      text-decoration: underline;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+    strong {
+      color: #2c3e50;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
+      .container {
+        margin: 20px auto;
+        padding: 0 15px;
+      }
+      .section {
+        padding: 20px 15px;
+      }
     }
   </style>
 </head>

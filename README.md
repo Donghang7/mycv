@@ -5,40 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dong Hang's Resume</title>
   <style>
-    /* Reset & base */
+    /* Reset */
     * {
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #e9f0f7, #f4f9fc);
+      background: #eef4f8;
       color: #333;
       line-height: 1.6;
     }
 
     header {
-      background-color: #2c3e50;
-      color: #ecf0f1;
-      padding: 40px 20px;
+      background: linear-gradient(135deg, #2a5d9f, #3d7fcc);
+      color: white;
+      padding: 50px 20px 60px;
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header img.avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
     }
     header h1 {
+      font-size: 3rem;
       margin: 0 0 10px;
       font-weight: 700;
-      font-size: 2.8rem;
-      letter-spacing: 1.2px;
+      letter-spacing: 2px;
     }
     header p {
-      margin: 5px 0;
+      margin: 8px 0;
       font-weight: 300;
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      color: #bdc3c7;
+      font-size: 1.15rem;
+      max-width: 700px;
+      line-height: 1.4;
+      color: #dbe9fb;
     }
 
     .container {
@@ -48,26 +60,27 @@
     }
 
     .section {
-      background-color: #fff;
-      border-radius: 10px;
-      padding: 25px 30px;
+      background: white;
+      border-radius: 12px;
+      padding: 30px 35px;
       margin-bottom: 30px;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.07);
       transition: transform 0.3s ease;
+      cursor: default;
     }
     .section:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
     }
 
     h2 {
-      color: #34495e;
-      margin-top: 0;
-      margin-bottom: 15px;
       font-weight: 700;
-      border-left: 6px solid #2980b9;
-      padding-left: 12px;
-      font-size: 1.8rem;
+      font-size: 1.9rem;
+      margin-top: 0;
+      margin-bottom: 20px;
+      color: #1c3d6a;
+      border-left: 6px solid #3d7fcc;
+      padding-left: 14px;
     }
 
     ul {
@@ -75,60 +88,93 @@
       padding-left: 0;
     }
     li {
-      margin-bottom: 12px;
-      font-size: 1.05rem;
+      margin-bottom: 14px;
+      font-size: 1.1rem;
       position: relative;
-      padding-left: 15px;
+      padding-left: 20px;
+      color: #444;
     }
     li::before {
-      content: "•";
-      color: #2980b9;
+      content: "▹";
       position: absolute;
       left: 0;
-      font-size: 1.3rem;
+      color: #3d7fcc;
+      font-weight: bold;
+      font-size: 1.2rem;
       line-height: 1;
       top: 0;
     }
 
+    p {
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 18px;
+    }
+    strong {
+      color: #1c3d6a;
+    }
+
     a {
-      color: #2980b9;
-      text-decoration: none;
+      color: #3d7fcc;
       font-weight: 600;
-      transition: color 0.3s ease;
+      text-decoration: none;
+      transition: color 0.25s ease;
     }
     a:hover {
-      color: #1c5980;
+      color: #1c2f5c;
       text-decoration: underline;
     }
 
-    p {
-      font-size: 1.1rem;
-      margin-bottom: 15px;
+    /* Project image styling */
+    .project-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin-top: 15px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      cursor: zoom-in;
+      transition: transform 0.3s ease;
     }
-    strong {
-      color: #2c3e50;
+    .project-image:hover {
+      transform: scale(1.05);
     }
 
     /* Responsive */
     @media (max-width: 600px) {
+      header {
+        padding-bottom: 40px;
+      }
       header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
       h2 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
       }
       .container {
         margin: 20px auto;
         padding: 0 15px;
       }
       .section {
-        padding: 20px 15px;
+        padding: 25px 20px;
+      }
+      li {
+        font-size: 1rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      header img.avatar {
+        width: 110px;
+        height: 110px;
+        margin-bottom: 15px;
       }
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="https://i.pravatar.cc/140?img=12" alt="Dong Hang" class="avatar" />
     <h1>Dong Hang</h1>
     <p>Wastewater Treatment Engineer</p>
     <p>The environment needs everyone's care, and water resources need everyone's protection.</p>
@@ -174,6 +220,13 @@
       <p><strong>Cambodia Power Plant Water Treatment Project - China Huadian</strong></p>
       <p>Description: The project treats seawater and well water to produce high-quality boiler feedwater using a system consisting of ultrafiltration, seawater reverse osmosis, two-stage freshwater reverse osmosis, and EDI. Pretreatment capacity is 2×300 m³/h, desalination output is 2×76 t/h. The system can switch modes depending on water source availability to ensure steady freshwater supply.</p>
       <p>Achievement: Responsible for all wastewater, sewage, and drinking water treatment for the plant. Ensured compliant water quality and stable water supply, enabling full-load power generation. The plant contributes about 30% of Cambodia's national electricity grid output.</p>
+      
+      <!-- 相关项目图片 -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Reverse_osmosis_process.svg/320px-Reverse_osmosis_process.svg.png" alt="Reverse Osmosis Process" class="project-image" />
+      
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Water_treatment_plant_11.jpg/320px-Water_treatment_plant_11.jpg" alt="Water Treatment Plant" class="project-image" />
+      
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Industrial_wastewater_treatment_plant.jpg/320px-Industrial_wastewater_treatment_plant.jpg" alt="Industrial Wastewater Treatment Plant" class="project-image" />
     </div>
   </div>
 </body>
